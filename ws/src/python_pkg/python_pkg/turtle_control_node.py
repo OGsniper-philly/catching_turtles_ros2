@@ -43,6 +43,8 @@ class TurtleControlNode(Node):
                 distance_check = sqrt(x_check**2+y_check**2)
                 if distance_error > distance_check:
                     catch_turtle = turtle
+                    x_error = x_check
+                    y_error = y_check
                     distance_error = distance_check
     
             theta_error = atan2(y_error, x_error) - self.state.theta

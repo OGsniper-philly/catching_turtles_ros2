@@ -14,7 +14,7 @@ class TurtleSpawnerNode(Node):
         super().__init__("turtle_spawner_node")
         self.get_logger().info("turtle_spawner_node started...")
         # Spawn timer to call turtlesim window spawn service
-        self.spawn_timer = self.create_timer(2, self.call_spawn_service)
+        self.spawn_timer = self.create_timer(1, self.call_spawn_service)
         # Publish alive turtles
         self.turtle_pub = self.create_publisher(TurtleArray, "/alive_turtles", 10)
         self.turtle_array = TurtleArray()
