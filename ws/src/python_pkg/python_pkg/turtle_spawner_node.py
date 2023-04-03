@@ -9,17 +9,18 @@ from interfaces.srv import CatchTurtle
 from turtlesim.srv import Kill
 
 class TurtleSpawnerNode(Node):
-    """Node to handle spawn and kill services of to-catch turtles in turtlesim window"""
+    """Node to handle spawn and catch services of turtles in turtlesim window"""
     def __init__(self):
         super().__init__("turtle_spawner_node")
         self.get_logger().info("turtle_spawner_node started...")
-        # Spawn timer to call turtlesim window spawn service
+        # Spawn timer at 1Hz
         self.spawn_timer = self.create_timer(1, self.call_spawn_service)
-        # Publish alive turtles
+
+        # Alive turtles publisher
         self.turtle_pub = self.create_publisher(TurtleArray, "/alive_turtles", 10)
         self.turtle_array = TurtleArray()
 
-        # Catch turtle service
+        # Catch turtle service; simply calls the turtlesim window kill service
         self.catch_service = self.create_service(CatchTurtle, "/catch_turtle", self.call_kill_service)
 
     def call_kill_service(self, request, response):
@@ -31,9 +32,11 @@ class TurtleSpawnerNode(Node):
         kill_request.name = request.name
         future = kill_client.call_async(kill_request)
         future.add_done_callback(partial(self.kill_service_callback, name=request.name))
+        # Must return response since still a service
         return response
 
     def kill_service_callback(self, future, name):
+        """Turtlesim kill service callback"""
         try:
             response = future.result()
             # Remove turtle from alive turtles list
@@ -58,11 +61,11 @@ class TurtleSpawnerNode(Node):
         future.add_done_callback(partial(self.spawn_service_callback, x=request.x, y=request.y, theta=request.theta))
 
     def spawn_service_callback(self, future, x, y, theta):
-        """Handle turtlesim window spawn response"""
+        """Turtlesim spawn service callback"""
         try:
             response = future.result()
-            self.get_logger().info("spawned {} at ({}, {})".format(response.name, x, y))
-            # Add turtle in alive turtles
+            self.get_logger().info("spawned {} at ({}, {}, theta: {})".format(response.name, x, y, theta))
+            # Add turtle to alive turtles list
             new_turtle = Turtle()
             new_turtle.name = response.name
             new_turtle.pose[0] = x

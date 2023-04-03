@@ -8,21 +8,21 @@ from interfaces.srv import CatchTurtle
 from functools import partial
 
 class TurtleControlNode(Node):
-    """Node to control turtle1 and catch closest turtles. Utilizes a P controller to output velocity targets"""
+    """Node to control turtle1 and catch closest turtle available. Utilizes a P controller to output velocity targets"""
     def __init__(self):
         super().__init__("turtle_control_node")
         self.get_logger().info("turtle_control_node started...")
-        # Pose subscriber; pose state published by turtlesim window
+        # Turtle state subscriber
         self.state_sub = self.create_subscription(Pose, "/turtle1/pose", self.state_callback, 10)
         self.state = None
 
-        # P controller loop frequency
+        # P controller loop at 100Hz
         self.control_timer = self.create_timer(0.01, self.p_control_loop)
         # Proportional gains; ratio 1-3 found via testing
         self.k_pos = 2
         self.k_theta = 6
 
-        # Velocity publisher; velocity subscribed to by turtlesim window
+        # Velocity publisher
         self.vel_pub = self.create_publisher(Twist, "/turtle1/cmd_vel", 10)
 
         # Array of turtles in turtlesim window; used to find closest turtle to catch
@@ -36,7 +36,8 @@ class TurtleControlNode(Node):
             catch_turtle = self.turtle_array.alive_turtles[0]
             x_error = catch_turtle.pose[0] - self.state.x
             y_error = catch_turtle.pose[1] - self.state.y
-            distance_error = sqrt(x_error**2+y_error**2)
+            # Distance from closest turtle
+            distance_error = sqrt(x_error**2+y_error**2) 
             for turtle in self.turtle_array.alive_turtles:
                 x_check = turtle.pose[0] - self.state.x
                 y_check = turtle.pose[1] - self.state.y
@@ -57,7 +58,6 @@ class TurtleControlNode(Node):
             vel_target = Twist()
             # Check if close enough to catch
             if distance_error < 0.3:
-                # Stop turtle
                 self.vel_pub.publish(vel_target)
                 self.turtle_array.alive_turtles.remove(catch_turtle)
                 self.call_catch_service(catch_turtle.name)
@@ -71,9 +71,11 @@ class TurtleControlNode(Node):
                 self.vel_pub.publish(vel_target)
 
     def state_callback(self, state_msg):
+        """Update current pose state of turtle1"""
         self.state = state_msg
 
     def turtle_callback(self, turtle_array_msg):
+        """Update available turtles to catch"""
         self.turtle_array = turtle_array_msg
 
     def call_catch_service(self, name):
@@ -87,6 +89,7 @@ class TurtleControlNode(Node):
         future.add_done_callback(partial(self.catch_service_callback, name=name))
     
     def catch_service_callback(self, future, name):
+        """Catch turtle service callback"""
         try:
             response = future.result()
             self.get_logger().info("Caught {}".format(name))
