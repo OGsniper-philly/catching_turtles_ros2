@@ -14,15 +14,15 @@ class TurtleSpawnerNode(Node):
         super().__init__("turtle_spawner_node")
         self.get_logger().info("turtle_spawner_node started...")
         # Spawn timer to call turtlesim window spawn service
-        self.spawn_timer = self.create_timer(1, self.spawn_timer_callback)
+        self.spawn_timer = self.create_timer(2, self.call_spawn_service)
         # Publish alive turtles
         self.turtle_pub = self.create_publisher(TurtleArray, "/alive_turtles", 10)
         self.turtle_array = TurtleArray()
 
         # Catch turtle service
-        self.catch_service = self.create_service(CatchTurtle, "/catch_turtle", self.catch_service_callback)
+        self.catch_service = self.create_service(CatchTurtle, "/catch_turtle", self.call_kill_service)
 
-    def catch_service_callback(self, request, response):
+    def call_kill_service(self, request, response):
         """Catch turtle with requested name by calling turtlesim window kill service"""
         kill_client = self.create_client(Kill, "/kill")
         while not kill_client.wait_for_service(1.0):
@@ -45,14 +45,14 @@ class TurtleSpawnerNode(Node):
         except Exception as e:
             self.get_logger().error("Service call failed: {}".format(e))
 
-    def spawn_timer_callback(self):
+    def call_spawn_service(self):
         """Call turtlesim window spawn service"""
         spawn_client = self.create_client(Spawn, "/spawn")
         while not spawn_client.wait_for_service(1.0):
             self.get_logger().warn("waiting for /spawn service...")
         request = Spawn.Request()
-        request.x = uniform(0, 11)
-        request.y = uniform(0, 11)
+        request.x = uniform(0.5, 10.5)
+        request.y = uniform(0.5, 10.5)
         request.theta = uniform(0, 2*pi)
         future = spawn_client.call_async(request)
         future.add_done_callback(partial(self.spawn_service_callback, x=request.x, y=request.y, theta=request.theta))

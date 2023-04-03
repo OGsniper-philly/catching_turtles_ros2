@@ -18,7 +18,7 @@ class TurtleControlNode(Node):
 
         # P controller loop frequency
         self.control_timer = self.create_timer(0.01, self.p_control_loop)
-        # Proportional gain; ratio 1-3 found via testing
+        # Proportional gains; ratio 1-3 found via testing
         self.k_pos = 2
         self.k_theta = 6
 
@@ -36,24 +36,27 @@ class TurtleControlNode(Node):
             catch_turtle = self.turtle_array.alive_turtles[0]
             x_error = catch_turtle.pose[0] - self.state.x
             y_error = catch_turtle.pose[1] - self.state.y
-            for turtle in self.turtle_array.alive_turtles:
-                x_dist = turtle.pose[0] - self.state.x
-                y_dist = turtle.pose[1] - self.state.y
-                if sqrt(x_error**2 + y_error**2) > sqrt(x_dist**2 + y_dist**2):
-                    catch_turtle = turtle
-                    x_error = catch_turtle.pose[0] - self.state.x
-                    y_error = catch_turtle.pose[1] - self.state.y
-    
             distance_error = sqrt(x_error**2+y_error**2)
+            for turtle in self.turtle_array.alive_turtles:
+                x_check = turtle.pose[0] - self.state.x
+                y_check = turtle.pose[1] - self.state.y
+                distance_check = sqrt(x_check**2+y_check**2)
+                if distance_error > distance_check:
+                    catch_turtle = turtle
+                    distance_error = distance_check
+    
             theta_error = atan2(y_error, x_error) - self.state.theta
             # normalize angle
             if theta_error > pi:
                 theta_error -= 2*pi
             elif theta_error < -pi:
                 theta_error += 2*pi
-
+            
+            vel_target = Twist()
             # Check if close enough to catch
-            if distance_error < 0.1:
+            if distance_error < 0.3:
+                # Stop turtle
+                self.vel_pub.publish(vel_target)
                 self.turtle_array.alive_turtles.remove(catch_turtle)
                 self.call_catch_service(catch_turtle.name)
             else:
@@ -61,7 +64,6 @@ class TurtleControlNode(Node):
                 linear_vel = self.k_pos * distance_error
                 angular_vel = self.k_theta * theta_error
                 # Create velocity message; turtle can only move in x axis in robot frame (forward only)
-                vel_target = Twist()
                 vel_target.linear.x = linear_vel
                 vel_target.angular.z = angular_vel
                 self.vel_pub.publish(vel_target)
