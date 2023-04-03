@@ -1,0 +1,25 @@
+[0.298s] Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/python_pkg': PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/prefix_override:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/python_pkg build --build-base /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build install --record /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/install.log --single-version-externally-managed
+[0.414s] running egg_info
+[0.414s] writing ../../build/python_pkg/python_pkg.egg-info/PKG-INFO
+[0.414s] writing dependency_links to ../../build/python_pkg/python_pkg.egg-info/dependency_links.txt
+[0.414s] writing entry points to ../../build/python_pkg/python_pkg.egg-info/entry_points.txt
+[0.414s] writing requirements to ../../build/python_pkg/python_pkg.egg-info/requires.txt
+[0.414s] writing top-level names to ../../build/python_pkg/python_pkg.egg-info/top_level.txt
+[0.415s] reading manifest file '../../build/python_pkg/python_pkg.egg-info/SOURCES.txt'
+[0.415s] writing manifest file '../../build/python_pkg/python_pkg.egg-info/SOURCES.txt'
+[0.415s] running build
+[0.416s] running build_py
+[0.416s] copying python_pkg/turtle_control_node.py -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg
+[0.416s] running install
+[0.416s] running install_lib
+[0.416s] copying /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg/turtle_control_node.py -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg
+[0.416s] byte-compiling /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg/turtle_control_node.py to turtle_control_node.cpython-310.pyc
+[0.417s] running install_data
+[0.417s] running install_egg_info
+[0.418s] removing '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.418s] Copying ../../build/python_pkg/python_pkg.egg-info to /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg-0.0.0-py3.10.egg-info
+[0.418s] running install_scripts
+[0.429s] Installing turtle_control_node script to /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python_pkg
+[0.429s] Installing turtle_spawner_node script to /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python_pkg
+[0.429s] writing list of installed files to '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/install.log'
+[0.443s] Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/python_pkg' returned '0': PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/prefix_override:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/python_pkg build --build-base /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build install --record /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/install.log --single-version-externally-managed

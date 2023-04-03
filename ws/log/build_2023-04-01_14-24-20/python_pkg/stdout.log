@@ -1,0 +1,38 @@
+running egg_info
+creating ../../build/python_pkg/python_pkg.egg-info
+writing ../../build/python_pkg/python_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/python_pkg/python_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/python_pkg/python_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/python_pkg/python_pkg.egg-info/requires.txt
+writing top-level names to ../../build/python_pkg/python_pkg.egg-info/top_level.txt
+writing manifest file '../../build/python_pkg/python_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/python_pkg/python_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/python_pkg/python_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build
+creating /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib
+creating /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg
+copying python_pkg/turtle_control_node.py -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg
+copying python_pkg/__init__.py -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg
+copying python_pkg/turtle_spawner_node.py -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg
+running install
+running install_lib
+creating /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg
+copying /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg/turtle_control_node.py -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg
+copying /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg/__init__.py -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg
+copying /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/build/lib/python_pkg/turtle_spawner_node.py -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg
+byte-compiling /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg/turtle_control_node.py to turtle_control_node.cpython-310.pyc
+byte-compiling /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg/turtle_spawner_node.py to turtle_spawner_node.cpython-310.pyc
+running install_data
+creating /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/share/ament_index
+creating /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/share/ament_index/resource_index
+creating /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/share/ament_index/resource_index/packages
+copying resource/python_pkg -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/share/python_pkg
+running install_egg_info
+Copying ../../build/python_pkg/python_pkg.egg-info to /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing turtle_control_node script to /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python_pkg
+writing list of installed files to '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/python_pkg/install.log'

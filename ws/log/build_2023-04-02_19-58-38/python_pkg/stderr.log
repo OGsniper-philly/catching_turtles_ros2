@@ -1,0 +1,5 @@
+  File "/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg/lib/python3.10/site-packages/python_pkg/turtle_control_node.py", line 57
+    y_error = 10.0 = state_msg.y
+              ^^^^
+SyntaxError: cannot assign to literal
+

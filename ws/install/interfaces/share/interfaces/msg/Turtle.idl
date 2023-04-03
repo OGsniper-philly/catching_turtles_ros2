@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from interfaces/msg/Turtle.msg
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module msg {
+    typedef float float__3[3];
+    struct Turtle {
+      string name;
+
+      @verbatim (language="comment", text=
+        "x y theta")
+      float__3 pose;
+    };
+  };
+};

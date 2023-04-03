@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'turtle_control_node = python_pkg.turtle_control_node:main',
+            'turtle_spawner_node = python_pkg.turtle_spawner_node:main',
         ],
     },
 )

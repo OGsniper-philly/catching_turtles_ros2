@@ -1,0 +1,8 @@
+{
+  "package_name": "interfaces",
+  "non_idl_tuples": [
+    "/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/interfaces:msg/Turtle.msg",
+    "/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/interfaces:msg/TurtleArray.msg",
+    "/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/interfaces:srv/CatchTurtle.srv"
+  ]
+}
