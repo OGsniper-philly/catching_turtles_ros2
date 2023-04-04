@@ -45,38 +45,38 @@ size_t interfaces__msg__Turtle__rosidl_typesupport_introspection_c__size_functio
 const void * interfaces__msg__Turtle__rosidl_typesupport_introspection_c__get_const_function__Turtle__pose(
   const void * untyped_member, size_t index)
 {
-  const float * member =
-    (const float *)(untyped_member);
+  const double * member =
+    (const double *)(untyped_member);
   return &member[index];
 }
 
 void * interfaces__msg__Turtle__rosidl_typesupport_introspection_c__get_function__Turtle__pose(
   void * untyped_member, size_t index)
 {
-  float * member =
-    (float *)(untyped_member);
+  double * member =
+    (double *)(untyped_member);
   return &member[index];
 }
 
 void interfaces__msg__Turtle__rosidl_typesupport_introspection_c__fetch_function__Turtle__pose(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const float * item =
-    ((const float *)
+  const double * item =
+    ((const double *)
     interfaces__msg__Turtle__rosidl_typesupport_introspection_c__get_const_function__Turtle__pose(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
+  double * value =
+    (double *)(untyped_value);
   *value = *item;
 }
 
 void interfaces__msg__Turtle__rosidl_typesupport_introspection_c__assign_function__Turtle__pose(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  float * item =
-    ((float *)
+  double * item =
+    ((double *)
     interfaces__msg__Turtle__rosidl_typesupport_introspection_c__get_function__Turtle__pose(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
+  const double * value =
+    (const double *)(untyped_value);
   *item = *value;
 }
 
@@ -100,7 +100,7 @@ static rosidl_typesupport_introspection_c__MessageMember interfaces__msg__Turtle
   },
   {
     "pose",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     true,  // is array

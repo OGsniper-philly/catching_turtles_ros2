@@ -1,2 +1,2 @@
 string name
-float32[3] pose # x y theta
+float64[3] pose # x y theta

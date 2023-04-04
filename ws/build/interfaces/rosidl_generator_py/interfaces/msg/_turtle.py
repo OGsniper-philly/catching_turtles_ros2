@@ -66,12 +66,12 @@ class Turtle(metaclass=Metaclass_Turtle):
 
     _fields_and_field_types = {
         'name': 'string',
-        'pose': 'float[3]',
+        'pose': 'double[3]',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('double'), 3),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -80,9 +80,9 @@ class Turtle(metaclass=Metaclass_Turtle):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.name = kwargs.get('name', str())
         if 'pose' not in kwargs:
-            self.pose = numpy.zeros(3, dtype=numpy.float32)
+            self.pose = numpy.zeros(3, dtype=numpy.float64)
         else:
-            self.pose = numpy.array(kwargs.get('pose'), dtype=numpy.float32)
+            self.pose = numpy.array(kwargs.get('pose'), dtype=numpy.float64)
             assert self.pose.shape == (3, )
 
     def __repr__(self):
@@ -146,8 +146,8 @@ class Turtle(metaclass=Metaclass_Turtle):
     @pose.setter
     def pose(self, value):
         if isinstance(value, numpy.ndarray):
-            assert value.dtype == numpy.float32, \
-                "The 'pose' numpy.ndarray() must have the dtype of 'numpy.float32'"
+            assert value.dtype == numpy.float64, \
+                "The 'pose' numpy.ndarray() must have the dtype of 'numpy.float64'"
             assert value.size == 3, \
                 "The 'pose' numpy.ndarray() must have a size of 3"
             self._pose = value
@@ -165,6 +165,6 @@ class Turtle(metaclass=Metaclass_Turtle):
                  not isinstance(value, UserString) and
                  len(value) == 3 and
                  all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'pose' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._pose = numpy.array(value, dtype=numpy.float32)
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'pose' field must be a set or sequence with length 3 and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._pose = numpy.array(value, dtype=numpy.float64)

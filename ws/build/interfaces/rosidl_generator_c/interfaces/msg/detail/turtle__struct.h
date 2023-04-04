@@ -26,7 +26,7 @@ typedef struct interfaces__msg__Turtle
 {
   rosidl_runtime_c__String name;
   /// x y theta
-  float pose[3];
+  double pose[3];
 } interfaces__msg__Turtle;
 
 // Struct for a sequence of interfaces__msg__Turtle.

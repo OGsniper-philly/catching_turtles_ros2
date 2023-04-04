@@ -39,7 +39,7 @@ struct Turtle_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->name = "";
-      std::fill<typename std::array<float, 3>::iterator, float>(this->pose.begin(), this->pose.end(), 0.0f);
+      std::fill<typename std::array<double, 3>::iterator, double>(this->pose.begin(), this->pose.end(), 0.0);
     }
   }
 
@@ -51,7 +51,7 @@ struct Turtle_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->name = "";
-      std::fill<typename std::array<float, 3>::iterator, float>(this->pose.begin(), this->pose.end(), 0.0f);
+      std::fill<typename std::array<double, 3>::iterator, double>(this->pose.begin(), this->pose.end(), 0.0);
     }
   }
 
@@ -60,7 +60,7 @@ struct Turtle_
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _name_type name;
   using _pose_type =
-    std::array<float, 3>;
+    std::array<double, 3>;
   _pose_type pose;
 
   // setters for named parameter idiom
@@ -71,7 +71,7 @@ struct Turtle_
     return *this;
   }
   Type & set__pose(
-    const std::array<float, 3> & _arg)
+    const std::array<double, 3> & _arg)
   {
     this->pose = _arg;
     return *this;

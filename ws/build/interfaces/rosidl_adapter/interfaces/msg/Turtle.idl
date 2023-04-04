@@ -5,13 +5,13 @@
 
 module interfaces {
   module msg {
-    typedef float float__3[3];
+    typedef double double__3[3];
     struct Turtle {
       string name;
 
       @verbatim (language="comment", text=
         "x y theta")
-      float__3 pose;
+      double__3 pose;
     };
   };
 };

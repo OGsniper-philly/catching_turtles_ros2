@@ -1,7 +1,9 @@
 import rclpy
 from math import atan2, sqrt, pi
+from random import randint
 from rclpy.node import Node
 from turtlesim.msg import Pose
+from turtlesim.srv import SetPen
 from geometry_msgs.msg import Twist
 from interfaces.msg import TurtleArray
 from interfaces.srv import CatchTurtle
@@ -18,9 +20,9 @@ class TurtleControlNode(Node):
 
         # P controller loop at 100Hz
         self.control_timer = self.create_timer(0.01, self.p_control_loop)
-        # Proportional gains; ratio 1-3 found via testing
-        self.k_pos = 2
-        self.k_theta = 6
+        # Proportional gains; ratio found via testing
+        self.k_pos = 3
+        self.k_theta = 9
 
         # Velocity publisher
         self.vel_pub = self.create_publisher(Twist, "/turtle1/cmd_vel", 10)
@@ -32,32 +34,13 @@ class TurtleControlNode(Node):
     def p_control_loop(self):
         """P controller implementation to catch closest turtle"""
         if self.turtle_array.alive_turtles and self.state:
-            # Find closest turtle
-            catch_turtle = self.turtle_array.alive_turtles[0]
-            x_error = catch_turtle.pose[0] - self.state.x
-            y_error = catch_turtle.pose[1] - self.state.y
-            # Distance from closest turtle
-            distance_error = sqrt(x_error**2+y_error**2) 
-            for turtle in self.turtle_array.alive_turtles:
-                x_check = turtle.pose[0] - self.state.x
-                y_check = turtle.pose[1] - self.state.y
-                distance_check = sqrt(x_check**2+y_check**2)
-                if distance_error > distance_check:
-                    catch_turtle = turtle
-                    x_error = x_check
-                    y_error = y_check
-                    distance_error = distance_check
+            # Closest turtle and P control errors
+            catch_turtle, distance_error, theta_error = self.find_closest_turtle()
     
-            theta_error = atan2(y_error, x_error) - self.state.theta
-            # normalize angle
-            if theta_error > pi:
-                theta_error -= 2*pi
-            elif theta_error < -pi:
-                theta_error += 2*pi
-            
             vel_target = Twist()
-            # Check if close enough to catch
-            if distance_error < 0.3:
+            # Check catch threshold
+            if distance_error < 0.2:
+                # Turtle caught
                 self.vel_pub.publish(vel_target)
                 self.turtle_array.alive_turtles.remove(catch_turtle)
                 self.call_catch_service(catch_turtle.name)
@@ -69,6 +52,31 @@ class TurtleControlNode(Node):
                 vel_target.linear.x = linear_vel
                 vel_target.angular.z = angular_vel
                 self.vel_pub.publish(vel_target)
+
+    def find_closest_turtle(self):
+        """Find closest turtle to catch and P controller errors"""
+        catch_turtle = self.turtle_array.alive_turtles[0]
+        x_error = catch_turtle.pose[0] - self.state.x
+        y_error = catch_turtle.pose[1] - self.state.y
+        # Distance from closest turtle
+        distance_error = sqrt(x_error**2+y_error**2) 
+        for turtle in self.turtle_array.alive_turtles:
+            x_check = turtle.pose[0] - self.state.x
+            y_check = turtle.pose[1] - self.state.y
+            distance_check = sqrt(x_check**2+y_check**2)
+            if distance_error > distance_check:
+                catch_turtle = turtle
+                x_error = x_check
+                y_error = y_check
+                distance_error = distance_check
+        theta_error = atan2(y_error, x_error) - self.state.theta
+        # normalize angle
+        if theta_error > pi:
+            theta_error -= 2*pi
+        elif theta_error < -pi:
+            theta_error += 2*pi
+        return catch_turtle, distance_error, theta_error
+
 
     def state_callback(self, state_msg):
         """Update current pose state of turtle1"""
@@ -93,6 +101,25 @@ class TurtleControlNode(Node):
         try:
             response = future.result()
             self.get_logger().info("Caught {}".format(name))
+            # Now change the pen colour !
+            pen_client = self.create_client(SetPen, "/turtle1/set_pen")
+            while not pen_client.wait_for_service(1.0):
+                self.get_logger().warn("waiting for /turtle1/set_pen service...")
+            request = SetPen.Request()
+            request.r = randint(0, 255)
+            request.g = randint(0, 255)
+            request.b = randint(0, 255)
+            request.width = 4 # Wanna see the colour
+            request.off = 0
+            future = pen_client.call_async(request)
+            future.add_done_callback(self.set_pen_service_callback)
+        except Exception as e:
+            self.get_logger().error("Service call failed: {}".format(e))
+
+    def set_pen_service_callback(self, future):
+        """Turtle1 SetPen service callback"""
+        try:
+            response = future.result()
         except Exception as e:
             self.get_logger().error("Service call failed: {}".format(e))
 

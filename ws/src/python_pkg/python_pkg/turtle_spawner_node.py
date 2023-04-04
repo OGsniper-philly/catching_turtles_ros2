@@ -13,10 +13,10 @@ class TurtleSpawnerNode(Node):
     def __init__(self):
         super().__init__("turtle_spawner_node")
         self.get_logger().info("turtle_spawner_node started...")
-        # Spawn timer at 1Hz
-        self.spawn_timer = self.create_timer(1, self.call_spawn_service)
+        # Spawn timer 
+        self.spawn_timer = self.create_timer(1.5, self.call_spawn_service)
 
-        # Alive turtles publisher
+        # Alive turtles publisher; publishes array when change occurs
         self.turtle_pub = self.create_publisher(TurtleArray, "/alive_turtles", 10)
         self.turtle_array = TurtleArray()
 
