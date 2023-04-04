@@ -3,3 +3,5 @@
 known errors:
 [turtlesim_node-1] QImage::pixel: coordinate (500,471) out of range
     -due to a pixel of a spawned turtle out of range of simulator. Goes away when this turtle is caught
+    
+to run: ros2 launch bring_up catching_turtles.launch.py
