@@ -1,0 +1,9 @@
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/uninstall.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/bring_up_uninstall.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/test.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/edit_cache.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/rebuild_cache.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/list_install_components.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/install.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/install/local.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/bring_up/CMakeFiles/install/strip.dir
