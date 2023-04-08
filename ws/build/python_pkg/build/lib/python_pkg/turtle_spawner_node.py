@@ -14,11 +14,11 @@ class TurtleSpawnerNode(Node):
         super().__init__("turtle_spawner_node")
         self.get_logger().info("turtle_spawner_node started...")
         # Spawn timer 
-        self.spawn_timer = self.create_timer(1.5, self.call_spawn_service)
+        self.spawn_timer = self.create_timer(1, self.call_spawn_service)
 
         # Alive turtles publisher; publishes array when change occurs
         self.turtle_pub = self.create_publisher(TurtleArray, "/alive_turtles", 10)
-        self.turtle_array = TurtleArray()
+        self.alive_turtles = []
 
         # Catch turtle service; simply calls the turtlesim window kill service
         self.catch_service = self.create_service(CatchTurtle, "/catch_turtle", self.call_kill_service)
@@ -40,9 +40,9 @@ class TurtleSpawnerNode(Node):
         try:
             response = future.result()
             # Remove turtle from alive turtles list
-            for turtle in self.turtle_array.alive_turtles:
+            for turtle in self.alive_turtles:
                 if turtle.name == name:
-                    self.turtle_array.alive_turtles.remove(turtle)
+                    self.alive_turtles.remove(turtle)
             # No need to publish since turtle_control_node already removed caught turtle
             self.get_logger().info("Killed {}".format(name))
         except Exception as e:
@@ -71,9 +71,11 @@ class TurtleSpawnerNode(Node):
             new_turtle.pose[0] = x
             new_turtle.pose[1] = y
             new_turtle.pose[2] = theta
-            self.turtle_array.alive_turtles.append(new_turtle)
+            self.alive_turtles.append(new_turtle)
             # Send updated array
-            self.turtle_pub.publish(self.turtle_array)
+            turtle_array = TurtleArray()
+            turtle_array.alive_turtles = self.alive_turtles
+            self.turtle_pub.publish(turtle_array)
         except Exception as e:
             self.get_logger().error("Service call failed: {}".format(e))
 

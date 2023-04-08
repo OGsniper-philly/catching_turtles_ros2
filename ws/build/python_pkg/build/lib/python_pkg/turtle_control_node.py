@@ -28,12 +28,12 @@ class TurtleControlNode(Node):
         self.vel_pub = self.create_publisher(Twist, "/turtle1/cmd_vel", 10)
 
         # Array of turtles in turtlesim window; used to find closest turtle to catch
-        self.turtle_array = TurtleArray()        
+        self.alive_turtles = []      
         self.turtle_sub = self.create_subscription(TurtleArray, "/alive_turtles", self.turtle_callback, 10)
 
     def p_control_loop(self):
         """P controller implementation to catch closest turtle"""
-        if self.turtle_array.alive_turtles and self.state:
+        if self.alive_turtles and self.state:
             # Closest turtle and P control errors
             catch_turtle, distance_error, theta_error = self.find_closest_turtle()
     
@@ -42,7 +42,7 @@ class TurtleControlNode(Node):
             if distance_error < 0.2:
                 # Turtle caught
                 self.vel_pub.publish(vel_target)
-                self.turtle_array.alive_turtles.remove(catch_turtle)
+                self.alive_turtles.remove(catch_turtle)
                 self.call_catch_service(catch_turtle.name)
             else:
                 # Control signals
@@ -55,12 +55,12 @@ class TurtleControlNode(Node):
 
     def find_closest_turtle(self):
         """Find closest turtle to catch and P controller errors"""
-        catch_turtle = self.turtle_array.alive_turtles[0]
+        catch_turtle = self.alive_turtles[0]
         x_error = catch_turtle.pose[0] - self.state.x
         y_error = catch_turtle.pose[1] - self.state.y
         # Distance from closest turtle
         distance_error = sqrt(x_error**2+y_error**2) 
-        for turtle in self.turtle_array.alive_turtles:
+        for turtle in self.alive_turtles:
             x_check = turtle.pose[0] - self.state.x
             y_check = turtle.pose[1] - self.state.y
             distance_check = sqrt(x_check**2+y_check**2)
@@ -84,7 +84,7 @@ class TurtleControlNode(Node):
 
     def turtle_callback(self, turtle_array_msg):
         """Update available turtles to catch"""
-        self.turtle_array = turtle_array_msg
+        self.alive_turtles = turtle_array_msg.alive_turtles
 
     def call_catch_service(self, name):
         """Call catch turtle service with name of turtle to catch"""
@@ -106,9 +106,9 @@ class TurtleControlNode(Node):
             while not pen_client.wait_for_service(1.0):
                 self.get_logger().warn("waiting for /turtle1/set_pen service...")
             request = SetPen.Request()
-            request.r = randint(0, 255)
-            request.g = randint(0, 255)
-            request.b = randint(0, 255)
+            request.r = randint(50, 255)
+            request.g = randint(50, 255)
+            request.b = randint(50, 255)
             request.width = 4 # Wanna see the colour
             request.off = 0
             future = pen_client.call_async(request)

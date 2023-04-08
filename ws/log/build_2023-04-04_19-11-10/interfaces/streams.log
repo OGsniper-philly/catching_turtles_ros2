@@ -1,0 +1,23 @@
+[0.009s] Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/interfaces -- -j20 -l20
+[0.035s] [  2%] Built target interfaces__cpp
+[0.035s] [ 12%] Built target interfaces__rosidl_generator_c
+[0.044s] [ 12%] Built target ament_cmake_python_copy_interfaces
+[0.049s] [ 25%] Built target interfaces__rosidl_typesupport_cpp
+[0.049s] [ 34%] Built target interfaces__rosidl_typesupport_c
+[0.050s] [ 44%] Built target interfaces__rosidl_typesupport_fastrtps_cpp
+[0.053s] [ 65%] Built target interfaces__rosidl_typesupport_introspection_cpp
+[0.053s] [ 65%] Built target interfaces__rosidl_typesupport_fastrtps_c
+[0.054s] [ 76%] Built target interfaces__rosidl_typesupport_introspection_c
+[0.065s] [ 76%] Built target interfaces
+[0.073s] [ 78%] Built target interfaces__py
+[0.084s] [ 87%] Built target interfaces__rosidl_generator_py
+[0.095s] [ 91%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.095s] [ 95%] Built target interfaces__rosidl_typesupport_introspection_c__pyext
+[0.096s] [100%] Built target interfaces__rosidl_typesupport_c__pyext
+[0.168s] running egg_info
+[0.168s] writing interfaces.egg-info/PKG-INFO
+[0.168s] writing dependency_links to interfaces.egg-info/dependency_links.txt
+[0.168s] writing top-level names to interfaces.egg-info/top_level.txt
+[0.169s] reading manifest file 'interfaces.egg-info/SOURCES.txt'
+[0.169s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[0.183s] [100%] Built target ament_cmake_python_build_interfaces_egg

@@ -1,0 +1,42 @@
+[0.140s] Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg': CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg -- -j20 -l20
+[0.173s] [35m[1mConsolidate compiler generated dependencies of target turtle_control_node[0m
+[0.180s] [ 25%] [32mBuilding CXX object CMakeFiles/turtle_spawner_node.dir/src/turtle_spawner_node.cpp.o[0m
+[0.183s] [ 50%] [32mBuilding CXX object CMakeFiles/turtle_control_node.dir/src/turtle_control_node.cpp.o[0m
+[1.467s] [01m[K/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg/src/turtle_spawner_node.cpp:[m[K In member function ‘[01m[Kvoid TurtleSpawnerNode::catch_service_callback(interfaces::srv::CatchTurtle_Request_<std::allocator<void> >::SharedPtr, interfaces::srv::CatchTurtle_Response_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.467s] [01m[K/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg/src/turtle_spawner_node.cpp:11:97:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.467s]    11 | void TurtleSpawnerNode::catch_service_callback([01;35m[Kinterfaces::srv::CatchTurtle::Request::SharedPtr request[m[K, interfaces::srv::CatchTurtle::Response::SharedPtr response)
+[1.467s]       |                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[1.467s] [01m[K/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg/src/turtle_spawner_node.cpp:11:156:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.467s]    11 | void TurtleSpawnerNode::catch_service_callback(interfaces::srv::CatchTurtle::Request::SharedPtr request, [01;35m[Kinterfaces::srv::CatchTurtle::Response::SharedPtr response[m[K)
+[1.467s]       |                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[3.228s] [01m[K/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg/src/turtle_control_node.cpp:[m[K In member function ‘[01m[Kstd::pair<interfaces::msg::Turtle_<std::allocator<void> >, __gnu_cxx::__normal_iterator<interfaces::msg::Turtle_<std::allocator<void> >*, std::vector<interfaces::msg::Turtle_<std::allocator<void> >, std::allocator<interfaces::msg::Turtle_<std::allocator<void> > > > > > TurtleControlNode::find_closest_turtle()[m[K’:
+[3.228s] [01m[K/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg/src/turtle_control_node.cpp:109:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[3.228s]   109 | [01;35m[K}[m[K
+[3.228s]       | [01;35m[K^[m[K
+[3.434s] [ 75%] [32m[1mLinking CXX executable turtle_spawner_node[0m
+[3.598s] [ 75%] Built target turtle_spawner_node
+[6.347s] [100%] [32m[1mLinking CXX executable turtle_control_node[0m
+[6.674s] [100%] Built target turtle_control_node
+[6.680s] Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg' returned '0': CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg -- -j20 -l20
+[6.694s] Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg': CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg
+[6.697s] -- Install configuration: ""
+[6.697s] -- Installing: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/lib/cpp_pkg/turtle_control_node
+[6.701s] -- Set runtime path of "/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/lib/cpp_pkg/turtle_control_node" to ""
+[6.701s] -- Installing: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/lib/cpp_pkg/turtle_spawner_node
+[6.702s] -- Set runtime path of "/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/lib/cpp_pkg/turtle_spawner_node" to ""
+[6.702s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/ament_index/resource_index/package_run_dependencies/cpp_pkg
+[6.702s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/ament_index/resource_index/parent_prefix_path/cpp_pkg
+[6.702s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/environment/ament_prefix_path.sh
+[6.702s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/environment/ament_prefix_path.dsv
+[6.702s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/environment/path.sh
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/environment/path.dsv
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/local_setup.bash
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/local_setup.sh
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/local_setup.zsh
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/local_setup.dsv
+[6.703s] -- Installing: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/package.dsv
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/ament_index/resource_index/packages/cpp_pkg
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/cmake/cpp_pkgConfig.cmake
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/cmake/cpp_pkgConfig-version.cmake
+[6.703s] -- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/package.xml
+[6.704s] Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg' returned '0': CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg

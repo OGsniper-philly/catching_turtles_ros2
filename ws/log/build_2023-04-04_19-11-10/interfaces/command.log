@@ -1,0 +1,1 @@
+Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/interfaces -- -j20 -l20

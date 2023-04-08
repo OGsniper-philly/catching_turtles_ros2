@@ -1,0 +1,11 @@
+[0.006s] Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg -- -j20 -l20
+[0.028s] [ 50%] [32mBuilding CXX object CMakeFiles/turtle_control_node.dir/src/turtle_control_node.cpp.o[0m
+[0.124s] In file included from [01m[K/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg/src/turtle_control_node.cpp:1[m[K:
+[0.124s] [01m[K/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg/include/cpp_pkg/turtle_control_node.hpp:3:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/twist.hpp: No such file or directory
+[0.124s]     3 | #include [01;31m[K"geometry_msgs/msg/twist.hpp"[m[K
+[0.124s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.124s] compilation terminated.
+[0.127s] gmake[2]: *** [CMakeFiles/turtle_control_node.dir/build.make:76: CMakeFiles/turtle_control_node.dir/src/turtle_control_node.cpp.o] Error 1
+[0.127s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/turtle_control_node.dir/all] Error 2
+[0.127s] gmake: *** [Makefile:146: all] Error 2
+[0.129s] Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg -- -j20 -l20

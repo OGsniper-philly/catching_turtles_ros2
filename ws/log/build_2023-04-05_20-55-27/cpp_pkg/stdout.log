@@ -1,0 +1,28 @@
+[35m[1mConsolidate compiler generated dependencies of target turtle_control_node[0m
+[35m[1mConsolidate compiler generated dependencies of target turtle_spawner_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/turtle_control_node.dir/src/turtle_control_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/turtle_spawner_node.dir/src/turtle_spawner_node.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable turtle_spawner_node[0m
+[ 75%] Built target turtle_spawner_node
+[100%] [32m[1mLinking CXX executable turtle_control_node[0m
+[100%] Built target turtle_control_node
+-- Install configuration: ""
+-- Installing: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/lib/cpp_pkg/turtle_control_node
+-- Set runtime path of "/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/lib/cpp_pkg/turtle_control_node" to ""
+-- Installing: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/lib/cpp_pkg/turtle_spawner_node
+-- Set runtime path of "/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/lib/cpp_pkg/turtle_spawner_node" to ""
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/ament_index/resource_index/package_run_dependencies/cpp_pkg
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/ament_index/resource_index/parent_prefix_path/cpp_pkg
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/environment/path.sh
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/environment/path.dsv
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/local_setup.bash
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/local_setup.sh
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/local_setup.zsh
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/local_setup.dsv
+-- Installing: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/package.dsv
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/ament_index/resource_index/packages/cpp_pkg
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/cmake/cpp_pkgConfig.cmake
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/cmake/cpp_pkgConfig-version.cmake
+-- Up-to-date: /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/cpp_pkg/share/cpp_pkg/package.xml

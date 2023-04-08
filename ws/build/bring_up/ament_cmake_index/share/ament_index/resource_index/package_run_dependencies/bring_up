@@ -1,1 +1,1 @@
-python_pkg;ros2launch;ament_lint_auto;ament_lint_common
+python_pkg;cpp_pkg;ros2launch;ament_lint_auto;ament_lint_common

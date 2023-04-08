@@ -1,0 +1,11 @@
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/uninstall.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/cpp_pkg_uninstall.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/turtle_control_node.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/turtle_spawner_node.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/test.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/edit_cache.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/rebuild_cache.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/list_install_components.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/install.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/install/local.dir
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/build/cpp_pkg/CMakeFiles/install/strip.dir

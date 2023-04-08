@@ -1,0 +1,315 @@
+[0.157s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.157s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fbc34bbec80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fbc34bbe710>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fbc34bbe710>>)
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.173s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(bring_up) by extension 'ros'
+[0.181s] DEBUG:colcon.colcon_core.package_identification:Package 'bring_up' with type 'ros.ament_cmake' and name 'bring_up'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extension 'ignore_ament_install'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extensions ['colcon_pkg']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extension 'colcon_pkg'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extensions ['colcon_meta']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(cpp_pkg) by extension 'ros'
+[0.182s] DEBUG:colcon.colcon_core.package_identification:Package 'cpp_pkg' with type 'ros.ament_cmake' and name 'cpp_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ignore_ament_install'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['colcon_pkg']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'colcon_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['colcon_meta']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'colcon_meta'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['ros']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ros'
+[0.182s] DEBUG:colcon.colcon_core.package_identification:Package 'interfaces' with type 'ros.ament_cmake' and name 'interfaces'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extension 'ignore_ament_install'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extensions ['colcon_pkg']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extension 'colcon_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extensions ['colcon_meta']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extension 'colcon_meta'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extensions ['ros']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(python_pkg) by extension 'ros'
+[0.183s] DEBUG:colcon.colcon_core.package_identification:Package 'python_pkg' with type 'ros.ament_python' and name 'python_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.196s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install
+[0.197s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'cmake_args' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'cmake_target' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cpp_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'cpp_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg', 'merge_install': False, 'path': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_target' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces', 'merge_install': False, 'path': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'cmake_target' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'python_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'python_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/python_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg', 'merge_install': False, 'path': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/python_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'cmake_target' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'bring_up' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'bring_up' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up', 'merge_install': False, 'path': '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/bring_up', 'symlink_install': False, 'test_result_base': None}
+[0.226s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.228s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.228s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/interfaces' with build type 'ament_cmake'
+[0.228s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/interfaces'
+[0.230s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.231s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.231s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.233s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg' with build type 'ament_cmake'
+[0.233s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg'
+[0.234s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.234s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.239s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces
+[0.241s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg -DCMAKE_INSTALL_PREFIX=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg
+[0.575s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/cpp_pkg -DCMAKE_INSTALL_PREFIX=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg
+[0.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg -- -j20 -l20
+[0.595s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg -- -j20 -l20
+[0.609s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg
+[0.614s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cpp_pkg)
+[0.615s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/cpp_pkg
+[0.617s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg' for CMake module files
+[0.617s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg' for CMake config files
+[0.617s] Level 1:colcon.colcon_core.shell:create_environment_hook('cpp_pkg', 'cmake_prefix_path')
+[0.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/hook/cmake_prefix_path.ps1'
+[0.618s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/hook/cmake_prefix_path.dsv'
+[0.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/hook/cmake_prefix_path.sh'
+[0.619s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/bin'
+[0.619s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/lib/pkgconfig/cpp_pkg.pc'
+[0.619s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/lib/python3.10/site-packages'
+[0.619s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/bin'
+[0.620s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.ps1'
+[0.620s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.dsv'
+[0.620s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.sh'
+[0.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.bash'
+[0.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.zsh'
+[0.621s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/colcon-core/packages/cpp_pkg)
+[0.633s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cpp_pkg)
+[0.634s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg' for CMake module files
+[0.634s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg' for CMake config files
+[0.634s] Level 1:colcon.colcon_core.shell:create_environment_hook('cpp_pkg', 'cmake_prefix_path')
+[0.635s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/hook/cmake_prefix_path.ps1'
+[0.635s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/hook/cmake_prefix_path.dsv'
+[0.635s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/hook/cmake_prefix_path.sh'
+[0.636s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/bin'
+[0.636s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/lib/pkgconfig/cpp_pkg.pc'
+[0.636s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/lib/python3.10/site-packages'
+[0.636s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/bin'
+[0.636s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.ps1'
+[0.637s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.dsv'
+[0.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.sh'
+[0.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.bash'
+[0.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.zsh'
+[0.637s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/colcon-core/packages/cpp_pkg)
+[1.026s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces
+[1.027s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces -- -j20 -l20
+[2.236s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces -- -j20 -l20
+[2.276s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces
+[2.311s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces)
+[2.311s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/interfaces
+[2.312s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces' for CMake module files
+[2.313s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces' for CMake config files
+[2.313s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'cmake_prefix_path')
+[2.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.ps1'
+[2.314s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.dsv'
+[2.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.sh'
+[2.314s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib'
+[2.314s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'ld_library_path_lib')
+[2.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.ps1'
+[2.315s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.dsv'
+[2.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.sh'
+[2.315s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/bin'
+[2.316s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib/pkgconfig/interfaces.pc'
+[2.316s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib/python3.10/site-packages'
+[2.316s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/bin'
+[2.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.ps1'
+[2.317s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.dsv'
+[2.317s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.sh'
+[2.317s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.bash'
+[2.317s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.zsh'
+[2.317s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/colcon-core/packages/interfaces)
+[2.356s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces)
+[2.357s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces' for CMake module files
+[2.357s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces' for CMake config files
+[2.357s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'cmake_prefix_path')
+[2.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.ps1'
+[2.358s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.dsv'
+[2.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.sh'
+[2.359s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib'
+[2.359s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'ld_library_path_lib')
+[2.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.ps1'
+[2.359s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.dsv'
+[2.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.sh'
+[2.360s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/bin'
+[2.360s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib/pkgconfig/interfaces.pc'
+[2.360s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib/python3.10/site-packages'
+[2.360s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/bin'
+[2.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.ps1'
+[2.361s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.dsv'
+[2.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.sh'
+[2.362s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.bash'
+[2.362s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/interfaces/package.zsh'
+[2.362s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/share/colcon-core/packages/interfaces)
+[2.362s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/python_pkg' with build type 'ament_python'
+[2.362s] Level 1:colcon.colcon_core.shell:create_environment_hook('python_pkg', 'ament_prefix_path')
+[2.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/hook/ament_prefix_path.ps1'
+[2.363s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/hook/ament_prefix_path.dsv'
+[2.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/hook/ament_prefix_path.sh'
+[2.364s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.364s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.496s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/python_pkg'
+[2.497s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.497s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.662s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/python_pkg': AMENT_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/python_pkg/prefix_override:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/python_pkg build --build-base /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/python_pkg/build install --record /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/python_pkg/install.log --single-version-externally-managed
+[2.819s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg' for CMake module files
+[2.820s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/python_pkg' returned '0': AMENT_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/python_pkg/prefix_override:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/python_pkg build --build-base /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/python_pkg/build install --record /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/python_pkg/install.log --single-version-externally-managed
+[2.820s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg' for CMake config files
+[2.821s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib'
+[2.821s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/bin'
+[2.821s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/pkgconfig/python_pkg.pc'
+[2.821s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages'
+[2.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('python_pkg', 'pythonpath')
+[2.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/hook/pythonpath.ps1'
+[2.822s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/hook/pythonpath.dsv'
+[2.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/hook/pythonpath.sh'
+[2.823s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/bin'
+[2.823s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(python_pkg)
+[2.824s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/package.ps1'
+[2.825s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/package.dsv'
+[2.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/package.sh'
+[2.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/package.bash'
+[2.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/python_pkg/package.zsh'
+[2.825s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/share/colcon-core/packages/python_pkg)
+[2.825s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/bring_up' with build type 'ament_cmake'
+[2.825s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/bring_up'
+[2.826s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.826s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.833s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up': AMENT_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/bring_up -DCMAKE_INSTALL_PREFIX=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up
+[3.165s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up' returned '0': AMENT_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/bring_up -DCMAKE_INSTALL_PREFIX=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up
+[3.166s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up': AMENT_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up -- -j20 -l20
+[3.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up' returned '0': AMENT_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up -- -j20 -l20
+[3.194s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up': AMENT_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up
+[3.199s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bring_up)
+[3.201s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up' for CMake module files
+[3.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up' returned '0': AMENT_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/interfaces:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/python_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/python_pkg/lib/python3.10/site-packages:/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/build/bring_up
+[3.201s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up' for CMake config files
+[3.202s] Level 1:colcon.colcon_core.shell:create_environment_hook('bring_up', 'cmake_prefix_path')
+[3.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/hook/cmake_prefix_path.ps1'
+[3.203s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/hook/cmake_prefix_path.dsv'
+[3.203s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/hook/cmake_prefix_path.sh'
+[3.203s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/bin'
+[3.203s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/lib/pkgconfig/bring_up.pc'
+[3.203s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/lib/python3.10/site-packages'
+[3.204s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/bin'
+[3.204s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.ps1'
+[3.204s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.dsv'
+[3.205s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.sh'
+[3.205s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.bash'
+[3.205s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.zsh'
+[3.205s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/colcon-core/packages/bring_up)
+[3.216s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bring_up)
+[3.217s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up' for CMake module files
+[3.217s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up' for CMake config files
+[3.217s] Level 1:colcon.colcon_core.shell:create_environment_hook('bring_up', 'cmake_prefix_path')
+[3.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/hook/cmake_prefix_path.ps1'
+[3.218s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/hook/cmake_prefix_path.dsv'
+[3.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/hook/cmake_prefix_path.sh'
+[3.219s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/bin'
+[3.219s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/lib/pkgconfig/bring_up.pc'
+[3.219s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/lib/python3.10/site-packages'
+[3.219s] Level 1:colcon.colcon_core.environment:checking '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/bin'
+[3.220s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.ps1'
+[3.220s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.dsv'
+[3.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.sh'
+[3.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.bash'
+[3.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/bring_up/package.zsh'
+[3.221s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/bring_up/share/colcon-core/packages/bring_up)
+[3.221s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.222s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.222s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.222s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.226s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.226s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.226s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.236s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.237s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/local_setup.ps1'
+[3.237s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/_local_setup_util_ps1.py'
+[3.238s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/setup.ps1'
+[3.239s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/local_setup.sh'
+[3.239s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/_local_setup_util_sh.py'
+[3.239s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/setup.sh'
+[3.240s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/local_setup.bash'
+[3.240s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/setup.bash'
+[3.241s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/local_setup.zsh'
+[3.241s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/setup.zsh'

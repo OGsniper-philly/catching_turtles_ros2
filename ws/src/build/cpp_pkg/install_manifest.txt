@@ -1,0 +1,15 @@
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/ament_index/resource_index/package_run_dependencies/cpp_pkg
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/ament_index/resource_index/parent_prefix_path/cpp_pkg
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/environment/ament_prefix_path.sh
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/environment/ament_prefix_path.dsv
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/environment/path.sh
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/environment/path.dsv
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/local_setup.bash
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/local_setup.sh
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/local_setup.zsh
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/local_setup.dsv
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.dsv
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/ament_index/resource_index/packages/cpp_pkg
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/cmake/cpp_pkgConfig.cmake
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/cmake/cpp_pkgConfig-version.cmake
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/src/install/cpp_pkg/share/cpp_pkg/package.xml
