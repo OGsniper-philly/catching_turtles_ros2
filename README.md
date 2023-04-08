@@ -11,9 +11,9 @@ Feel free to change the params file located in ws/src/bring_up/config/ directory
 the P controller and the spawn rate of the turtles to catch.
 
 Key Technologies:
-    ROS2 Topics and Services in C++ and Python
-    Custom interfaces for data transfer between nodes
-    Multithreaded processing (C++ only)
-    Object oriented design
-    Client-server model
-    P controller automation
+     - ROS2 Topics and Services in C++ and Python
+     - Custom interfaces for data transfer between nodes
+     - Multithreaded processing (C++ only)
+     - Object oriented design
+     - Client-server model
+     - P controller automation
