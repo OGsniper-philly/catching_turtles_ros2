@@ -4,14 +4,21 @@
 #include <cmath>
 
 TurtleControlNode::TurtleControlNode()
-    : Node("turtle_control_node"), k_linear_{3}, k_theta_{10}
+    : Node("turtle_control_node")
 {
+    this->declare_parameter("k_linear", 3.0);
+    this->declare_parameter("k_theta", 10.0);
+    k_linear_ = this->get_parameter("k_linear").as_double();
+    k_theta_ = this->get_parameter("k_theta").as_double();
     control_timer_ = this->create_wall_timer(1ms, std::bind(&TurtleControlNode::p_control_loop, this));
     state_sub_ = this->create_subscription<turtlesim::msg::Pose>("/turtle1/pose", 10,
                                                                  std::bind(&TurtleControlNode::state_subscription_callback, this, _1));
     velocity_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
     turtles_sub_ = this->create_subscription<interfaces::msg::TurtleArray>("/alive_turtles", 10,
                                                                            std::bind(&TurtleControlNode::turtles_subscription_callback, this, _1));
+    client_threads_.push_back(std::thread(std::bind(&TurtleControlNode::call_set_pen_service, this)));
+
+    RCLCPP_INFO(this->get_logger(), "turtle_control_node started ...");
 }
 
 void TurtleControlNode::p_control_loop()
@@ -101,6 +108,29 @@ interfaces::msg::Turtle TurtleControlNode::find_closest_turtle()
         }
     }
     return closest_turtle;
+}
+
+void TurtleControlNode::call_set_pen_service()
+{
+    auto pen_client = this->create_client<turtlesim::srv::SetPen>("/turtle1/set_pen");
+    while (!pen_client->wait_for_service(1s))
+    {
+        RCLCPP_WARN(this->get_logger(), "Waiting /set_pen service ...");
+    }
+    auto request = std::make_shared<turtlesim::srv::SetPen::Request>();
+    request->b = 255;
+    request->width = 4;
+    auto future = pen_client->async_send_request(request);
+    try
+    {
+        auto response = future.get();
+        RCLCPP_INFO(this->get_logger(), "Set pen to blue.");
+    }
+    catch(const std::exception& e)
+    {
+        RCLCPP_ERROR(this->get_logger(), e.what());
+    }
+    
 }
 
 void TurtleControlNode::state_subscription_callback(const turtlesim::msg::Pose &pose_msg)

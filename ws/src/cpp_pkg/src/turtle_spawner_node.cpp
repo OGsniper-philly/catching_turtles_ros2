@@ -3,9 +3,12 @@
 TurtleSpawnerNode::TurtleSpawnerNode()
     : Node("turtle_spawner_node")
 {
-    spawn_timer_ = this->create_wall_timer(1s, std::bind(&TurtleSpawnerNode::spawn_timer_callback, this));
+    this->declare_parameter("spawn_period", 1);
+    spawn_timer_ = this->create_wall_timer(std::chrono::seconds(this->get_parameter("spawn_period").as_int()), std::bind(&TurtleSpawnerNode::spawn_timer_callback, this));
     turtles_pub_ = this->create_publisher<interfaces::msg::TurtleArray>("/alive_turtles", 10);
     catch_service_ = this->create_service<interfaces::srv::CatchTurtle>("/catch_turtle", std::bind(&TurtleSpawnerNode::catch_service_callback, this, _1, _2));
+    // TODO: GET NAME PARAMETER
+    RCLCPP_INFO(this->get_logger(), "turtle_spawner_node started ...");
 }
 
 void TurtleSpawnerNode::catch_service_callback(interfaces::srv::CatchTurtle::Request::SharedPtr request, interfaces::srv::CatchTurtle::Response::SharedPtr response)
@@ -37,9 +40,9 @@ void TurtleSpawnerNode::call_kill_service(const std::string &name)
                 break;
             }
         }
-        RCLCPP_WARN(this->get_logger(), std::string(std::string("Killed ")+name).c_str());
+        RCLCPP_WARN(this->get_logger(), std::string(std::string("Killed ") + name).c_str());
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         RCLCPP_ERROR(this->get_logger(), e.what());
     }
@@ -60,8 +63,8 @@ void TurtleSpawnerNode::call_spawn_service()
         RCLCPP_WARN(this->get_logger(), "Waiting for /spawn service ...");
     }
     static std::default_random_engine engine;
-    std::uniform_real_distribution<float> position(1.0, 10.0);
-    std::uniform_real_distribution<float> angle(0.0, 2*M_PI);
+    std::uniform_real_distribution<float> position(0.5, 10.5);
+    std::uniform_real_distribution<float> angle(0.0, 2 * M_PI);
     auto request = std::make_shared<turtlesim::srv::Spawn::Request>();
     request->x = position(engine);
     request->y = position(engine);
@@ -79,9 +82,9 @@ void TurtleSpawnerNode::call_spawn_service()
         interfaces::msg::TurtleArray turtles;
         turtles.alive_turtles = alive_turtles_;
         turtles_pub_->publish(turtles);
-        RCLCPP_INFO(this->get_logger(), std::string(std::string("Spawned ")+response->name).c_str());
+        RCLCPP_INFO(this->get_logger(), std::string(std::string("Spawned ") + response->name).c_str());
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         RCLCPP_ERROR(this->get_logger(), e.what());
     }

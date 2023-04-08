@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "turtlesim/msg/pose.hpp"
+#include "turtlesim/srv/set_pen.hpp"
 #include "interfaces/msg/turtle_array.hpp"
 #include "interfaces/msg/turtle.hpp"
 #include "interfaces/srv/catch_turtle.hpp"
@@ -18,10 +19,11 @@ class TurtleControlNode : public rclcpp::Node
         void state_subscription_callback(const turtlesim::msg::Pose &pose_msg);
         void turtles_subscription_callback(const interfaces::msg::TurtleArray &turtles);
         void call_catch_service(const std::string &name);
+        void call_set_pen_service();
         interfaces::msg::Turtle find_closest_turtle();
     private:
-        int16_t k_linear_;
-        int16_t k_theta_;
+        double k_linear_;
+        double k_theta_;
         rclcpp::TimerBase::SharedPtr control_timer_;
         rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr state_sub_;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr velocity_pub_;

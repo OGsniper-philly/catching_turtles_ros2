@@ -1,4 +1,5 @@
 /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up/share/bring_up/launch/catching_turtles.launch.py
+/home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up/share/bring_up/config/params.yaml
 /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up/share/ament_index/resource_index/package_run_dependencies/bring_up
 /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up/share/ament_index/resource_index/parent_prefix_path/bring_up
 /home/nikolai/Documents/ROS/catching_turtles_ros2/ws/install/bring_up/share/bring_up/environment/ament_prefix_path.sh

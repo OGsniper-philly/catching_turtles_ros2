@@ -1,0 +1,17 @@
+turtle_control_python:
+  ros__parameters:
+    k_linear: 2.0     # double
+    k_theta: 6.0      # double
+
+turtle_spawner_python:
+  ros__parameters:
+    spawn_period: 1   # integer
+
+turtle_control_cpp:
+  ros__parameters:
+    k_linear: 3.0     # double
+    k_theta: 10.0     # double
+
+turtle_spawner_cpp:
+  ros__parameters:
+    spawn_period: 1   # integer
