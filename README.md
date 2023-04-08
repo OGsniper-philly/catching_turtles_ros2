@@ -7,12 +7,14 @@ Two turtlesim windows will pop up. Each window corresponds to code written in C+
 will try to "catch" all of the turtles randomly spawned in the window. It will do this by catching the closest one. The Python
 implementation will have a red turtle trail and C++ a blue one.
 
-Feel free to change the params file located in ws/src/bring_up/config/ directory. You can change the proportional gains used in
-the P controller and the spawn rate of the turtles to catch.
+Feel free to change the params.yaml file located in ws/src/bring_up/config/ directory. Some parameters include proportional gains used in
+P controllers, spawn rate, catch the closest turtle or not, and many more.
 
 Key Technologies:
-     - ROS2 Topics and Services in C++ and Python
-     - Custom interfaces for data transfer between nodes
+     - ROS2:
+          Topics and Services in C++ and Python
+          Launch files
+          Custom interfaces (data transfer between nodes)
      - Multithreaded processing (C++ only)
      - Object oriented design
      - Client-server model
