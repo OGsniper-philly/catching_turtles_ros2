@@ -12,8 +12,8 @@ P controllers, spawn rate, catch the closest turtle or not, and many more.
 
 Key Technologies:
      - ROS2:
-          Topics and Services in C++ and Python
-          Launch files
+          Topics and Services in C++ and Python,
+          Launch files,
           Custom interfaces (data transfer between nodes)
      - Multithreaded processing (C++ only)
      - Object oriented design
