@@ -12,10 +12,12 @@ from functools import partial
 class TurtleControlNode(Node):
     def __init__(self):
         super().__init__("turtle_control_node")
-        self.declare_parameter("k_linear", 2.0)
-        self.declare_parameter("k_theta", 6.0)
+        self.declare_parameter("k_linear", 3.0)
+        self.declare_parameter("k_theta", 7.0)
+        self.declare_parameter("catch_closest_turtle", True)
         self.k_linear = self.get_parameter("k_linear").get_parameter_value().double_value
         self.k_theta = self.get_parameter("k_theta").get_parameter_value().double_value
+        self.catch_closest_turtle = self.get_parameter("catch_closest_turtle").get_parameter_value().bool_value
 
         self.state_sub = self.create_subscription(Pose, "/turtle1/pose", self.state_callback, 10)
         self.state = Pose()
@@ -34,8 +36,10 @@ class TurtleControlNode(Node):
 
     def p_control_loop(self):
         if self.alive_turtles:
-            closest_turtle = self.find_closest_turtle()
-            self.get_logger().warn("Closest turtle: {}".format(closest_turtle.name))
+            if self.catch_closest_turtle:
+                closest_turtle = self.find_closest_turtle()
+            else:
+                closest_turtle = self.alive_turtles[0]
             x_error = closest_turtle.pose[0] - self.state.x
             y_error = closest_turtle.pose[1] - self.state.y
             distance_error = sqrt(x_error**2+y_error**2)
@@ -76,6 +80,9 @@ class TurtleControlNode(Node):
 
     def turtle_callback(self, turtle_array_msg):
         self.alive_turtles = turtle_array_msg.alive_turtles
+        self.get_logger().info("Available to catch:")
+        for turtle in self.alive_turtles:
+            self.get_logger().info("\t"+turtle.name)
 
     def call_catch_service(self, name):
         catch_client = self.create_client(CatchTurtle, "/catch_turtle")

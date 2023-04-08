@@ -11,9 +11,9 @@ from turtlesim.srv import Kill
 class TurtleSpawnerNode(Node):
     def __init__(self):
         super().__init__("turtle_spawner_node")
-        self.declare_parameter("spawn_period", 1)
-        self.spawn_frequency = self.get_parameter("spawn_period").get_parameter_value().integer_value
-        self.spawn_timer = self.create_timer(self.spawn_frequency, self.call_spawn_service)
+        self.declare_parameter("spawn_frequency", 1)
+        self.spawn_frequency = self.get_parameter("spawn_frequency").get_parameter_value().integer_value
+        self.spawn_timer = self.create_timer(1/self.spawn_frequency, self.call_spawn_service)
 
         self.turtle_pub = self.create_publisher(TurtleArray, "/alive_turtles", 10)
         self.alive_turtles = []

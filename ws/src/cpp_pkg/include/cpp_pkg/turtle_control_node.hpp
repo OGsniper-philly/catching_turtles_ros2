@@ -24,6 +24,7 @@ class TurtleControlNode : public rclcpp::Node
     private:
         double k_linear_;
         double k_theta_;
+        bool catch_closest_turtle_;
         rclcpp::TimerBase::SharedPtr control_timer_;
         rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr state_sub_;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr velocity_pub_;

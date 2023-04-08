@@ -18,6 +18,7 @@ def generate_launch_description():
             namespace='sim1',            
             executable='turtlesim_node',
             name='turtlesim1',
+            parameters=[config]
         ),
         Node(
             package='python_pkg',
@@ -50,6 +51,7 @@ def generate_launch_description():
             namespace='sim2',
             executable='turtlesim_node',
             name='turtlesim2',
+            parameters=[config]
         ),
         Node(
             package='cpp_pkg',

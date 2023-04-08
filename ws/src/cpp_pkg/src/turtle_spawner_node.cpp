@@ -3,8 +3,9 @@
 TurtleSpawnerNode::TurtleSpawnerNode()
     : Node("turtle_spawner_node")
 {
-    this->declare_parameter("spawn_period", 1);
-    spawn_timer_ = this->create_wall_timer(std::chrono::seconds(this->get_parameter("spawn_period").as_int()), std::bind(&TurtleSpawnerNode::spawn_timer_callback, this));
+    this->declare_parameter("spawn_frequency", 1);
+    spawn_frequency_ = this->get_parameter("spawn_frequency").as_int();
+    spawn_timer_ = this->create_wall_timer(std::chrono::seconds(1/spawn_frequency_), std::bind(&TurtleSpawnerNode::spawn_timer_callback, this));
     turtles_pub_ = this->create_publisher<interfaces::msg::TurtleArray>("/alive_turtles", 10);
     catch_service_ = this->create_service<interfaces::srv::CatchTurtle>("/catch_turtle", std::bind(&TurtleSpawnerNode::catch_service_callback, this, _1, _2));
     // TODO: GET NAME PARAMETER

@@ -24,6 +24,7 @@ public:
 
 private:
     rclcpp::TimerBase::SharedPtr spawn_timer_;
+    unsigned int spawn_frequency_;
     std::vector<std::thread> client_threads_;
     std::vector<interfaces::msg::Turtle> alive_turtles_;
     rclcpp::Publisher<interfaces::msg::TurtleArray>::SharedPtr turtles_pub_;

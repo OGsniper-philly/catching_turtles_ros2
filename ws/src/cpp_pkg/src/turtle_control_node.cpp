@@ -8,8 +8,10 @@ TurtleControlNode::TurtleControlNode()
 {
     this->declare_parameter("k_linear", 3.0);
     this->declare_parameter("k_theta", 10.0);
+    this->declare_parameter("catch_closest_turtle", true);
     k_linear_ = this->get_parameter("k_linear").as_double();
     k_theta_ = this->get_parameter("k_theta").as_double();
+    catch_closest_turtle_ = this->get_parameter("catch_closest_turtle").as_bool();
     control_timer_ = this->create_wall_timer(1ms, std::bind(&TurtleControlNode::p_control_loop, this));
     state_sub_ = this->create_subscription<turtlesim::msg::Pose>("/turtle1/pose", 10,
                                                                  std::bind(&TurtleControlNode::state_subscription_callback, this, _1));
@@ -25,13 +27,19 @@ void TurtleControlNode::p_control_loop()
 {
     if (!alive_turtles_.empty())
     {
-        auto closest_turtle = find_closest_turtle();
+        interfaces::msg::Turtle closest_turtle;
+        if (catch_closest_turtle_)
+        {
+            closest_turtle = find_closest_turtle();
+        } else
+        {
+            closest_turtle = alive_turtles_[0];
+        }
         double x_error = closest_turtle.pose[0] - state_.x;
         double y_error = closest_turtle.pose[1] - state_.y;
-        // P control errors
+        
         double distance_error = sqrt(x_error * x_error + y_error * y_error);
         double theta_error = atan2(y_error, x_error) - state_.theta;
-        // normalize angle
         if (theta_error > M_PI)
         {
             theta_error -= 2 * M_PI;
@@ -51,7 +59,6 @@ void TurtleControlNode::p_control_loop()
         }
         else
         {
-            // Control signal
             velocity_msg.linear.x = distance_error * k_linear_;
             velocity_msg.angular.z = theta_error * k_theta_;
             velocity_pub_->publish(velocity_msg);
