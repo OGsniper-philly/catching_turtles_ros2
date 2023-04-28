@@ -50,7 +50,7 @@ class TurtleControlNode(Node):
                 theta_error += 2*pi
     
             vel_target = Twist()
-            if distance_error < 0.2:
+            if distance_error < 0.4:
                 self.vel_pub.publish(vel_target)
                 self.alive_turtles.remove(closest_turtle)
                 self.call_catch_service(closest_turtle.name)
